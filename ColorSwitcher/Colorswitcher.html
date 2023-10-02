@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
 </head>
+
 <body>
-  
-    <div class="wrapper">
-        <div>
-        <h1>
-            Color Scheme Switcher
-        </h1>
-        </div>
-        <div class="wrapper1">
-        <div class="button" id="grey"></div>
-        <div class="button" id="yellow"> </div>
-        <div class="button" id="blue"></div>
-        <div class="button" id="green"></div>
-        </div>
+
+    <div class="color_switcher switch">
+        <div class="switch_button ">
+             <i class="ri-settings-5-fill">
+
+             </i>
+            
     </div>
- 
+
+        <h3>Select Color</h3>
+
+        <div class="theme_button_container">
+            <span class="theme_btn"  id="DeepPink" style="background-color:#FF1493;"> </span>
+            <span class="theme_btn"  id="orange" style="background-color:#E55604 ;"> </span>
+            <span class="theme_btn"  id="skyblue" style="background-color:#2596be ;"> </span>
+            <span class="theme_btn"  id="red" style="background-color:#DC143C;"> </span>
+            <span class="theme_btn"  id="pink" style="background-color:#FFC0CB;"> </span>
+            <span class="theme_btn"  id="yellow" style="background-color:#FFA500;"> </span>
+        </div>
+
+    </div>
+    <div class="container">
 
 
-    <h3>
-        Try clicking on the colors above
-        <span>
-            to change the background color of this page.
-        </span>
-    </h3>
+        <h1 id="Heading-Changed">Color Switcher</h1>
+    </div>
 </body>
 <script src="script.js"></script>
+
 </html>

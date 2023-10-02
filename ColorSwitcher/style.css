@@ -1,44 +1,148 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+
+
+
+
+
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
- .button{
-   
-    height: 45px;
-    width: 45px;
-    border: 1px solid black;
-    margin: 3px;
+    font-family: 'Young Serif', serif;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
 
 }
+:root{
 
-.wrapper{
+   --main-color :#8e44ad;
+
+}
+
+.container{
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50vh;
-    width: 100%;
-    flex-direction: column;
+background: var(--main-color);
+padding-bottom: 80px;
+
+
+}
+
+.container h1{
+    color: var(--main-color);
+    background: #ffff;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    font-size: 3rem;
+   padding: .5em .8em ;
+}
+
+.color_switcher{
+    position: fixed;
+    top: 10px;
+    right: -200px;
+    padding: 10px;
+    width: 200px;
+    background: #ffff;
+    padding: 10px;
+    z-index: 1000;
+}
+
+ .switch{
+    right: 0px;
+}
+
+.color_switcher h3{
+    color: var(--main-color);
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+    padding: 5px 0px;
+    text-align: center;
+
+}
+
+
+.switch_button{
+    position: absolute;
+    top: 0 ; left: -75px;
+    color: var(--main-color);
+    background: #ffff;
+    padding: 10px 20px;
+    font-size: 35px;
+    cursor: pointer;
+
+}
+
+
+
+.color_switcher i{
    
+    animation: rotation 2s linear infinite;
 }
-.wrapper1{
+
+@keyframes rotation {
+  0%{
+    transform: rotate(360%)
+    ;
+  }
+}
+
+
+
+.color_switcher .theme_button_container{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    height: 20vh;
+}
+ 
+
+.color_switcher .theme_button_container .theme_btn{
+    height: 50px;
+    width: 50px;
+    display: block;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 50px;
 }
 
-#grey{
-    background-color: grey;
-}
-#yellow{
-background-color: yellow;
-}
-#blue{
- background-color:blue;
-}
 
-#green{
-background-color: green;
+
+@media only screen and (max-width: 800px) {
+    .container h1{
+        padding: 0 10px;
+    }
+
 } 
+
+@media only screen and (max-width: 700px) {
+  
+  
+    
+
+    .container h1{
+      font-size: 1.4rem;
+    }
+
+    .switch_button{
+        font-size: 20px;
+    }
+
+    .color_switcher{
+        position: fixed;
+        top: 3px;
+        width: 200px;
+        background: #ffff;
+        z-index: 1000;
+    }
+    .color_switcher h3{
+        font-size: 15px;
+    }
+    .color_switcher i{
+        font-size: 32px;
+    }
+    }
