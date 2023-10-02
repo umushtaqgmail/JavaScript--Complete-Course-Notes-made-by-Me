@@ -80,15 +80,13 @@ padding-bottom: 80px;
 
 
 
-.color_switcher i{
-   
+ .color_switcher .switch_button i{
     animation: rotation 2s linear infinite;
 }
 
-@keyframes rotation {
-  0%{
-    transform: rotate(360%)
-    ;
+@keyframes rotation{
+  100%{
+    transform: (rotate360deg);
   }
 }
 
