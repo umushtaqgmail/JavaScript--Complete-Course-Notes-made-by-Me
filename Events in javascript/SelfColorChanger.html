@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <style>
+   *{
+    padding: 0;
+    margin: 0;
+   }
+   body{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color:violet;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    padding: 10px 22px;
+    border: none;
+    border-radius: 20px;
+    color: black;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.bgchanger{
+    text-align: center;
+    width: 50%;
+    height: 20vh;
+    padding: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="bgchanger">
+        <h1>Start Should Change the color every SECOND</h1>
+        <button id="start">
+            Start
+        </button>
+        <button id="end">End</button>
+    </div>
+</body>
+<script>
+    const ColorChanger = document.querySelector('h1');
+    const startBtn = document.querySelector('#start');
+    const endtBtn = document.querySelector('#end');
+
+//Generating Random Color
+
+const Randomnumber = Math.floor( Math.random() * 16 +1);
+    console.log(Randomnumber);
+
+const RandomColor= function(){
+ let hex = "0123456789ABCDEF";
+ let color = "#";
+ for(let i = 0; i<6; i++){
+    color += hex[Math.floor( Math.random() * 16 +1)];
+ }
+ return color;
+}
+let intervalId;
+
+
+const startColorChanging = function(){
+
+  const changeBgColor = function(){
+    document.body.style.backgroundColor = RandomColor();
+    
+  } 
+ intervalId = setInterval(changeBgColor, 1000);
+}
+
+const endColorChanging = function(){
+    clearInterval(intervalId);
+}
+startBtn.addEventListener('click', startColorChanging)
+
+endtBtn.addEventListener('click', endColorChanging)
+
+
+
+
+
+
+
+  
+
+</script>
+</html>
